@@ -108,10 +108,15 @@ class ProductProvider extends Component {
 
         const index = tempCart.indexOf(selectedProduct);
         const product = tempCart[index];
-
+        
         product.count = product.count - 1;
-        if(product.count ===0){
+        if(product.count < 0){
+            
             this.removeItem(id)
+        }
+        if(product.count ===0){
+            const r= window.confirm('really want to clear all?')
+            if(r===true) {this.removeItem(id)}
         }
         else{
             product.total = product.count*product.price;

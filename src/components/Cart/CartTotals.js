@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import PayPalButton from './PayPalButton';
-//import FedaPayButton from './FedaPayButton';
+import FedaPayButton from './FedaPayButton';
 
 // import { Container } from './styles';
 
@@ -28,7 +28,7 @@ const {cartSubtotal,cartTax,cartTotal,clearCart} = value;
                  </h5>
                  <PayPalButton total={cartTotal} clearCart={clearCart} history={history}  /> ou 
                  
-                  
+                  <FedaPayButton  clearCart={clearCart} history={history} />
                  
                 </div>
             </div>

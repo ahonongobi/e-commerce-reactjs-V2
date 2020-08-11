@@ -29,7 +29,7 @@ class Product extends Component {
                          {""} inCart
                      </p>
                  ) : (
-                    <img height="25" src="shopping.png"  className="fas fa-cart-plus" />
+                    <img alt="" height="25" src="shopping.png"  className="fas fa-cart-plus" />
                  )}
                  </button>
                  </div>)}

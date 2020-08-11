@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import styled from 'styled-components'
 import {ButtonContainer} from './Button';
+import "./navbar.css";
 import img from '../logo2.png';
 
 
@@ -22,21 +23,21 @@ class navbar extends Component {
       <ul className="navbar-nav align-items-center">
           <li className="nav-item ml-5">
               
-           <p className="contactez">Contact:<img  src="phone.png" width="20" height="20" /> +22964745149 | abyssiniea@gmail.com</p> 
+           <p className="contactez">Contact:<img alt="contact"  src="phone.png" width="10" height="10" />abyssiniea@gmail.com</p> 
               
           </li>
       </ul>
       <ul className="navbar-nav align-items-center">
           <li className="nav-item ml-5">
               
-           <p className="contactez">Creer/programmer par:Gobi abyssinie</p> 
+           <p  className="contactez">programming by:Gobi abyssinie</p> 
               
           </li>
       </ul>
       <Link to="/cart" className="ml-auto">
           <ButtonContainer>
               <span className="mr-2">
-              <img src="shopping.png" className="fas fa-cart-plus" />
+              <img alt="cart" src="shopping.png" width="50" height="50" className="fas fa-cart-plus" />
               </span>
               my cart
           </ButtonContainer>
@@ -51,6 +52,15 @@ background: var(--mainBlue);
     color: var(--mainWhite) !important;
     font-size:1.3rem;
     text-transform: capitalize;
+    display:flex;
+    justify-content:space-between;
+}
+@media (max-width: 767px) {
+    .contactez {
+        margin-right: 20px;
+
+        
+    }
 }
 `;
 
